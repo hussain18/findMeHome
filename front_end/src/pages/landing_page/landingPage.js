@@ -4,17 +4,25 @@ import './style.css'
 const homeIcon = require('../../assets/img/home-icon.png').default
 const signInIcon = require('../../assets/img/sign_in.png').default
 const brokenImg = require('../../assets/img/img_load_failed.png').default
+const phoneImg = require('../../assets/img/phone_img.png').default
+const emailImg = require('../../assets/img/email_img.png').default
+const addressImg = require('../../assets/img/address_img.png').default
+const manageImg = require('../../assets/img/manage_img.png').default
+const searchHomeImg = require('../../assets/img/search_home.png').default
+const signUpImg = require('../../assets/img/sign_up.png').default
+const uploadImg = require('../../assets/img/upload_img.png').default
 
 // Utility components
 const Card = props => {
   const link = props.link || '#'
   const img = props.img || brokenImg
-  return <div className = 'bg-hovered fast-transition col p-3'>
+  const msg = props.msg || "I am a card card card card"
+  return <div className = 'card-container bg-hovered fast-transition col p-3'>
     
     <a href = {link} className = 'link-card'>
       <img src = {img} className = 'img-card' alt='a card image'/>
       <hr/>
-      <p className = 'font-monospace'>I am a card card card card</p>
+      <p className = 'msg-card font-monospace'>{msg}</p>
     </a>
     
   </div>
@@ -32,7 +40,7 @@ const SearchArea = (props) => {
       <h1 className = 'search-heading fs-3'>Lets find you a new home!</h1>
       <hr/>
       <p class='font-monospace'>Search the areas you would like to stay</p>
-       <p>Search Area1</p> {/* TODO: We will put search bar here */}
+       <p id='search-bar'>Search Area1</p> {/* TODO: We will put search bar here */}
     </div>
   </div>
 }
@@ -42,11 +50,29 @@ const AboutUsArea = props => {
   return <div className = "container">
     <div 
       className = 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 justify-content-center'>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Card 
+          link = "#search-bar"
+          img = {searchHomeImg}
+          msg = {<>If you are looking for a new home, just go on and 
+            search where you want your new home to be.</>} />
+
+        <Card 
+          link = "#"
+          img = {signUpImg}
+          msg = {<>If you are owner, agent or you want us to 
+            remember you, sign up and become one of owr members</>} />
+
+        <Card 
+          link = "#"
+          img = {uploadImg}
+          msg = {<>If you are owner or agent and want to 
+            post your property, sign in/sign up to be able to do so.</>} />
+
+          <Card 
+            link = "#"
+            img = {manageImg}
+            msg = {<>And we will manage all the rest!</>} />
+        
     </div>
   </div>
 }
@@ -56,11 +82,21 @@ const ContactUsArea = props => {
   return <div className = "container">
     <div 
       className = 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 justify-content-center'>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Card 
+          link = "#"
+          img = {phoneImg}
+          msg = {<span>(+91) 9158798418<br/>(+91) 9264529523</span>} />
+        
+        <Card 
+          link = "#"
+          img = {emailImg}
+          msg = {<span>karim.amiri@gmail.com <br/> hakimuddin123@mail.com</span>} />
+        
+        <Card 
+          link = "#"
+          img = {addressImg}
+          msg = {<address>1206/13, Sudabhau Kelkar Path, 
+            Deccan Gymkhana, Pune, 411004, Maharashtra, India</address>} />
     </div>
   </div>
 }
@@ -78,13 +114,13 @@ const LandingPage = (props) => {
       </div>
     </div>
 
-    <div className="landing-container container-fluid border border-primary">
-      <h1>About us:</h1>
+    <div className="working-bg landing-container container-fluid">
+      <h1 className = 'cards-header'>How It Works</h1>
       <AboutUsArea/>
     </div>
 
-    <footer className="landing-container container-fluid border border-primary">
-      <h1>Contact Us:</h1>
+    <footer className="contact-bg landing-container container-fluid">
+      <h1 className = 'cards-header'>Contact Us</h1>
       <ContactUsArea/>
     </footer>
   </>
@@ -93,3 +129,6 @@ const LandingPage = (props) => {
 
 export default LandingPage;
 
+// Some more functionalities to be added
+//TODO: links to be added when all of pages are made
+//TODO: mark icons can have names when hovering over them
