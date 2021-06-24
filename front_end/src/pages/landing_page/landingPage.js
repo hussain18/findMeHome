@@ -66,7 +66,7 @@ const AboutUsArea = props => {
           link = "#"
           img = {uploadImg}
           msg = {<>If you are owner or agent and want to 
-            post your property, sign in/sign up to be able to do so.</>} />
+            let others know about your property, then go ahead and post it.</>} />
 
           <Card 
             link = "#"
