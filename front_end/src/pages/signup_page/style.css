@@ -1,0 +1,12 @@
+form {
+    border: 1px solid rgb(255, 196, 196);
+    padding: 5%;
+    /* padding-top: 4%; */
+    background-color: rgb(221, 221, 221);
+}
+
+.form-container {
+    padding: 10%;
+    padding-top: 5%;
+    font-family: 'Play', sans-serif;
+}

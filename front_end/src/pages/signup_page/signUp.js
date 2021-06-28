@@ -1,5 +1,6 @@
 import React from "react";
 import {InlineInput, SelectInput} from '../../components/inputs'
+import './style.css'
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -29,8 +30,9 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className='container form-container'>
         <form onSubmit={this.handleSubmit}>
+          <h1 className = 'text-center fs-1 fw-bold mb-5'>Joining Form</h1>
           <div className = 'row row-cols-1 g-3 align-items-center'>
             <InlineInput
               type = 'text'
@@ -86,11 +88,14 @@ class SignUp extends React.Component {
 
           </div>
 
-          <input value = "Submit" className = 'btn btn-primary mt-3' type="submit" />
+          <div class="row justify-content-center">
+            <input value = "Join" className = 'col-5 btn btn-primary mt-3' type="submit" />
+          </div>
         </form>
       </div>
     );
   }
+
 }
 
 export default SignUp;
