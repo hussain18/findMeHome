@@ -1,0 +1,121 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.start{
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://www.setaswall.com/wp-content/uploads/2017/06/House-Wallpapers-37-1920-x-1200.jpg');
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+
+}
+
+.form{
+	width: 380px;
+	height: 480px;
+	position: relative;
+	margin: 6px auto;
+	background: #fff;
+	padding: 5px;
+	/*overflow: hidden;*/
+}
+.box{
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px lightblue;
+	border-radius: 30px;
+}
+
+.toggle{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	position: relative;
+	outline: none;
+	border: none;
+}
+
+#btn {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background-image: linear-gradient(to right, #7879ff,#B3E5FC);
+	border-radius: 30px;
+}
+
+.social{
+	margin: 30px auto;
+	text-align: center;
+
+}
+
+.social img{
+width: 30px;
+height: 30px;
+margin: 0 12px;
+box-shadow: 0 0 20px 0 #B3E5FC;
+cursor: pointer;
+filter: grayscale(100%);
+}
+
+.social img:hover{
+	filter: grayscale(0%);
+}
+
+.input-group{
+	top: 180px;
+	width: 280px;
+	position: absolute;
+	transition: 0.5s;
+}
+
+.input-field{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5PX 0;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+
+}
+
+.submit-btn{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background-image: linear-gradient(to right, #7879ff,#B3E5FC);
+	border-radius: 30px;
+	outline: none;
+	border: 0;
+
+}
+
+.check-box{
+	margin: 30px 10px 30px 0;
+
+}
+
+span{
+	color: #777;
+	font-size: 12px;
+	bottom: 68px;
+	position: absolute;
+}
+
+#login{
+	left: 50px;
+}
+#register{
+	left: 450px;
+}
