@@ -26,7 +26,7 @@ function NavBar(props) {
                         <a className={"nav-link" + logIn} href="#">Log In</a>
                     </li>
                     <li className="nav-item">
-                        <a className={"nav-link" + signUp} href="#">Sign Up</a>
+                        <a className={"nav-link" + signUp} href="/signup">Sign Up</a>
                     </li>
                 </ul>
             </div>
