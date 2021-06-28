@@ -1,6 +1,21 @@
 import React from "react";
 import {InlineInput, SelectInput} from '../../components/inputs'
 import './style.css'
+import {FacebookLogin, GoogleLogin, LinkedInLogin, GithubLogin} from '../../components/social-accounts-btn'
+
+
+const SocialLoginView = props => {
+  return <div className = 'row justify-content-center mt-3'>
+    <div className = 'col-sm-10 col-md-8 col-lg-6'>
+      <div className = 'row row-cols-auto  justify-content-center'>
+        <FacebookLogin />
+        <GoogleLogin />
+        <GithubLogin />
+        <LinkedInLogin />
+      </div>
+    </div>
+  </div>
+}
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -85,12 +100,21 @@ class SignUp extends React.Component {
 
             <SelectInput required = {true} name='userType'
               value = {this.state.userType} onChange = {(event) => this.handleInputChange(event)} />
-
           </div>
 
+          {/* Submit button */}
           <div class="row justify-content-center">
-            <input value = "Join" className = 'col-5 btn btn-primary mt-3' type="submit" />
+            <input value = "Join" className = 'col-5 btn btn-primary mt-3 mb-2' type="submit" />
           </div>
+
+          {/* sign up throw social accounts options */}
+          <SocialLoginView />
+
+          {/* terms and condition notice */}
+          <hr/>
+          <p className='text-center'>
+            By creating this account you agree to our <a href="#">terms and conditions</a>
+          </p>
         </form>
       </div>
     );
