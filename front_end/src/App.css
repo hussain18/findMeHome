@@ -1,3 +1,23 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+}
+
+.sm-hovered:hover {
+  transform: scale(1.22594579);
+}
+
+.bg-hovered:hover {
+  transform: scale(1.08594579);
+}
+
+.normal-transition {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.fast-transition {
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }

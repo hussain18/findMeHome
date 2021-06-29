@@ -1,0 +1,119 @@
+/* Common styles */
+.landing-container {
+    min-height: 300px;
+    padding: 2% 0%;
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+}
+
+/* Searching Area styles */
+.search-area{
+    min-height: 400px;
+    padding:9% 10%;
+    text-align: center;
+}
+
+.search-area-bg {
+    background-image: url("../../assets/img/searching_area_bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-bg {
+    padding: 9%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.355);
+}
+
+.mark-item{
+    height: fit-content;
+    max-height: 50px;
+    margin: 1.5%;
+    width:fit-content;
+}
+
+.icon{
+    max-height: 35px;
+}
+
+.search-heading {
+    font-weight: 700;
+    font-family:'Syncopate', sans-serif;
+    letter-spacing: 5px;
+    
+    text-shadow: -1px -1px 0px rgb(42, 42, 42),
+        3px 3px 0px rgb(42, 42, 42),
+        6px 6px 0px rgb(24, 17, 17);
+}
+
+/* Card Styles */
+.img-card {
+    max-height: 100px;
+    margin: 3%;
+    margin-bottom: 10%;
+}
+
+a.link-card, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.cards-header {
+    font-weight: 900;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 4%;
+    margin-top: 2%;
+}
+
+.msg-card {
+    font-family: 'Play', sans-serif;
+}
+
+/* background images */
+.working-bg {
+    background-image: url("../../assets/img/working_bg_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-bg {
+    background-image: url("../../assets/img/contact_us_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive to small screens */
+@media (max-width:576px) {
+    .landing-container {
+        min-height: 250px;
+    }
+
+    .search-area {
+        min-height: 180px;
+    }
+
+    .mark-item{
+        height: fit-content;
+        max-height: 40px;
+        width: -webkit-fill-available;
+    }
+
+    .icon{
+        max-height: 30px;
+    }
+
+    .search-heading {
+        font-size: 20px !important;
+    }
+}
+
+/* Responsive to medium screens */
+@media (max-width:950px) {
+    .search-area {
+        min-height: 200px;
+    }
+}
