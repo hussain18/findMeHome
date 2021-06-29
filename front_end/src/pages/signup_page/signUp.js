@@ -5,13 +5,25 @@ import {FacebookLogin, GoogleLogin, LinkedInLogin, GithubLogin} from '../../comp
 
 
 const SocialLoginView = props => {
-  return <div className = 'row justify-content-center mt-3'>
+  return <div className = 'row justify-content-center mt-1'>
     <div className = 'col-sm-10 col-md-8 col-lg-6'>
       <div className = 'row row-cols-auto  justify-content-center'>
         <FacebookLogin />
         <GoogleLogin />
         <GithubLogin />
         <LinkedInLogin />
+      </div>
+    </div>
+  </div>
+}
+
+const OrView = props => {
+  return <div className = 'row justify-content-center'>
+    <div className = 'col-12 col-md-8'>
+      <div className = 'row justify-content-center'>
+        <div className = 'col-4 col-sm-5'><hr/></div>
+        <span className='col-auto'>OR</span>
+        <div className = 'col-4 col-sm-5'><hr/></div>
       </div>
     </div>
   </div>
@@ -104,8 +116,10 @@ class SignUp extends React.Component {
 
           {/* Submit button */}
           <div class="row justify-content-center">
-            <input value = "Join" className = 'col-5 btn btn-primary mt-3 mb-2' type="submit" />
+            <input value = "Join" className = 'col-5 btn btn-primary mt-3 mb-3' type="submit" />
           </div>
+
+          <OrView />
 
           {/* sign up throw social accounts options */}
           <SocialLoginView />
