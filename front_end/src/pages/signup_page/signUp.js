@@ -137,3 +137,10 @@ class SignUp extends React.Component {
 }
 
 export default SignUp;
+
+export {
+  SocialLoginView,
+  OrView,
+}
+
+// TODO: confirm password not done yet
