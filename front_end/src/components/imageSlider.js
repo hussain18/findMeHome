@@ -1,42 +1,97 @@
-import { useState } from "react"
+import { useState } from "react";
 
+// Images
+const forwardImg = require("../assets/test_img/forward_png.png").default;
+const backwardImg = require("../assets/test_img/backward_png.png").default;
 
-const Slider = props => {
+const Slider = (props) => {
+  const slideImages = props.images;
+  const length = slideImages.length;
 
-    const height = props.height || '600px'
-    const slideImages = props.images
-    const length = slideImages.length
+  // State variables
+  const [current, setCurrent] = useState(0);
+  const [imgCurrent, setImgCurrent] = useState(0);
 
-    // State variables
-    const [current, setCurrent] = useState(0)
-    let label = null
+  const nextSlide = () => {
+    // The function moves forward through categories (e.g. hall, kitchen, and ...)
+    // and each of it related images
+    // -----------------------------------------------------
 
-    const nextSlide = () => {
-        setCurrent(current === length-1? 0: current+1)
+    // Getting number of images in the current category
+    const imgsLength = slideImages[current].images.length;
+
+    // Going through images
+    if (imgsLength - 1 === imgCurrent) {
+      setCurrent(current === length - 1 ? 0 : current + 1); // categories forwarded
+      setImgCurrent(0);
+      return;
     }
 
-    const prevSlide = () => {
-        setCurrent(current === 0? length-1 : current-1)
+    setImgCurrent(imgCurrent + 1); // images forwarded
+  };
+
+  const prevSlide = () => {
+    // The function moves backwards through categories (e.g. hall, kitchen, and ...)
+    // and each of it related images
+    // -----------------------------------------------------
+
+    // Getting number of images in the current category and next current value
+    let imgsLength = slideImages[current].images.length;
+
+    // Going through images
+    if (0 === imgCurrent) {
+      setCurrent(current === 0 ? length - 1 : current - 1); // categories backward
+
+      const prevCurrent = current === 0 ? length - 1 : current - 1;
+      setImgCurrent(slideImages[prevCurrent].images.length - 1);
+      return;
     }
-    
-    return <>
-        <p className = 'fs-3 text-center fw-bold'>{label}</p>
-        <div className = "row justify-content-between align-items-stretch border border-warning">
-            <span onClick={prevSlide} className = 'col-sm-1 order-sm-first border border-danger' >Prev</span>
-            <span onClick={nextSlide} className = 'col-sm-1 order-sm-last border border-danger' >next</span>
-            {slideImages && slideImages.map((slides, index) => {
-                return index === current && <img style = {imgStyle} src={slides.images[0]} 
-                    className = 'col-sm-10 align-self-center'/>
-            })}
+
+    setImgCurrent(imgCurrent - 1); // images backward
+  };
+
+  return (
+    <>
+      <p className="fs-3 text-center fw-bold">{slideImages[current].label}</p>
+      <div className="slider-style row g-2 justify-content-md-between align-items-center">
+        <div
+          onClick={prevSlide}
+          className="col-sm-1 order-sm-first text-center"
+        >
+          <img
+            src={backwardImg}
+            style={{ maxWidth: 40 }}
+            className="icon icon-hovered"
+          />
         </div>
+        <div onClick={nextSlide} className="col-sm-1 order-sm-last text-center">
+          <img
+            src={forwardImg}
+            style={{ maxWidth: 40 }}
+            className="icon icon-hovered"
+          />
+        </div>
+        {slideImages &&
+          slideImages.map((slides, index) => {
+            return (
+              index === current && (
+                <img
+                  style={imgStyle}
+                  src={slides.images[imgCurrent]}
+                  className="col-sm-10 align-self-center"
+                />
+              )
+            );
+          })}
+      </div>
     </>
+  );
+};
 
-}
-
-export default Slider
+export default Slider;
 
 // styles
 const imgStyle = {
-    maxWidth: '800px',
-    maxHeight: '500px'
-}
+  maxWidth: "800px",
+  maxHeight: "500px",
+};
