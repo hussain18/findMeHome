@@ -78,7 +78,7 @@ const Slider = (props) => {
                 <img
                   style={imgStyle}
                   src={slides.images[imgCurrent]}
-                  className="col-sm-10 align-self-center"
+                  className="slide col-sm-10 mb-2 align-self-center icon"
                 />
               )
             );

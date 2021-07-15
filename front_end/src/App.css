@@ -41,6 +41,31 @@
   min-height: 500px !important;
 }
 
+@keyframes onload {
+  0% {
+    opacity: 0;
+    transform: scale(0)
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+
+  0% {
+    transform: rotate(90)
+  }
+}
+
+.slide {
+  animation-name: onload;
+  animation-duration: 200ms;
+}
+
+/* TODO: search for onload event css or react */
+
+
+
 /* Responsive to small screens */
 @media (max-width:576px) {
   .slider-style {
