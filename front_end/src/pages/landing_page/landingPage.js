@@ -108,8 +108,8 @@ const LandingPage = (props) => {
     <div className="search-area-bg landing-container container-fluid">
       <div className="container ">
         <div className="row justify-content-between">
-          <MarkArea path={homeIcon}/>
-          <MarkArea path={signInIcon}/>
+          <MarkArea path={homeIcon} label = "Find Me Home"/>
+          <MarkArea path={signInIcon} label = "Join us" />
         </div>
         <SearchArea />
       </div>

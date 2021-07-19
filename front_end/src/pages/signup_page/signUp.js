@@ -66,7 +66,7 @@ class SignUp extends React.Component {
     return (
       <div className='container form-container'>
         <div className = 'row row-cols-1 justify-content-center'>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} className = 'form'>
             <h1 className = 'text-center fs-1 fw-bold mb-5'>Joining Form</h1>
             <div className = 'row row-cols-1 g-3 align-items-center'>
               <InlineInput

@@ -62,10 +62,6 @@
   animation-duration: 200ms;
 }
 
-/* TODO: search for onload event css or react */
-
-
-
 /* Responsive to small screens */
 @media (max-width:576px) {
   .slider-style {
