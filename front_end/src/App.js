@@ -7,6 +7,8 @@ import Nav from "./components/navbar";
 // Pages
 import landingPage from "./pages/landingPage";
 import SearchResult from "./pages/SearchResult";
+import FlatDetails from "./pages/FlatDetails";
+import AddFlat from "./pages/AddFlat";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={landingPage} />
           <Route path="/search-result" component={SearchResult} />
+          <Route path="/flat-details" component={FlatDetails} />
+          <Route path="/add-flat" component={AddFlat} />
         </Switch>
       </BrowserRouter>
     </div>

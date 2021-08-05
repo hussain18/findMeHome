@@ -4,6 +4,7 @@ function NavBar(props) {
   const flatDetails = props.flatDetails || "";
   const logIn = props.logIn || "";
   const signUp = props.signUp || "";
+  const addFlat = props.addFlat || "";
 
   return (
     <nav className="navbar navbar-expand-sm navbar-light bg-light">
@@ -30,7 +31,7 @@ function NavBar(props) {
               </a>
             </li>
             <li className="nav-item">
-              <a className={"nav-link" + flatDetails} href="#">
+              <a className={"nav-link" + flatDetails} href="/flat-details">
                 Flat Details
               </a>
             </li>
@@ -47,6 +48,11 @@ function NavBar(props) {
             <li className="nav-item">
               <a className={"nav-link" + signUp} href="#">
                 Sign Up
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className={"nav-link" + addFlat} href="/add-flat">
+                Add Flat
               </a>
             </li>
           </ul>
