@@ -1,0 +1,29 @@
+
+/* Profile photo styles */
+.photo_holder {
+    min-height: 150px;
+    text-align: center;
+    padding: 1%;
+    padding-top: 7%;
+}
+
+.photo {
+    max-height: 200px;
+    border-radius: 90px;
+}
+
+/* Personal Info styles */
+.personal-info-container {
+    padding: 2%;
+}
+
+.info-holder {
+    padding: 0% 3%;
+}
+
+
+/* Properties list styles */
+.properties-container {
+    min-height: 150px;
+    padding: 1%;
+}

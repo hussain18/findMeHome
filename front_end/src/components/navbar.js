@@ -14,10 +14,10 @@ function NavBar(props) {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className = "navbar-nav">
                     <li className="nav-item">
-                        <a className={"nav-link" + profile} href="#">Profile</a>
+                        <a className={"nav-link" + profile} href="/profile">Profile</a>
                     </li>
                     <li className="nav-item">
-                        <a className={"nav-link" + flatDetails} href="#">Flat Details</a>
+                        <a className={"nav-link" + flatDetails} href="/flat_details">Flat Details</a>
                     </li>
                     <li className="nav-item">
                         <a className={"nav-link" + searchResult} href="#">Search Result</a>

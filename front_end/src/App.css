@@ -1,5 +1,6 @@
 .App {
   /* text-align: center; */
+  font-family: 'Play', sans-serif;
 }
 
 .sm-hovered:hover {
@@ -20,4 +21,50 @@
   transition-property: all;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
+}
+
+
+/************************** Components Styles **************************/
+
+/* imageSlider.js */
+.icon-hovered:hover {
+  transform: scale(1.5234556)
+}
+
+.icon{
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.74, 2.12, 0.68, 0.73);
+}
+
+.slider-style {
+  min-height: 500px !important;
+}
+
+@keyframes onload {
+  0% {
+    opacity: 0;
+    transform: scale(0)
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+
+  0% {
+    transform: rotate(90)
+  }
+}
+
+.slide {
+  animation-name: onload;
+  animation-duration: 200ms;
+}
+
+/* Responsive to small screens */
+@media (max-width:576px) {
+  .slider-style {
+    min-height: 0px !important;
+  }
 }

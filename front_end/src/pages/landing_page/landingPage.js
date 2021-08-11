@@ -1,4 +1,5 @@
 import './style.css'
+import { SearchInContainer } from '../../components/search_bar'
 
 // Icons paths
 const homeIcon = require('../../assets/img/home-icon.png').default
@@ -40,7 +41,7 @@ const SearchArea = (props) => {
       <h1 className = 'search-heading fs-3'>Lets find you a new home!</h1>
       <hr/>
       <p class='font-monospace'>Search the areas you would like to stay</p>
-       <p id='search-bar'>Search Area1</p> {/* TODO: We will put search bar here */}
+       <SearchInContainer/>
     </div>
   </div>
 }
@@ -107,8 +108,8 @@ const LandingPage = (props) => {
     <div className="search-area-bg landing-container container-fluid">
       <div className="container ">
         <div className="row justify-content-between">
-          <MarkArea path={homeIcon}/>
-          <MarkArea path={signInIcon}/>
+          <MarkArea path={homeIcon} label = "Find Me Home"/>
+          <MarkArea path={signInIcon} label = "Join us" />
         </div>
         <SearchArea />
       </div>
